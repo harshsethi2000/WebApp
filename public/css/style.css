@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgba(245, 238, 238, 0.89);
+}
+nav{
+    margin-bottom: 40px;
+}
+img{
+    max-width: 100%;
+    transition: all 0.7s ;
+}
+
+.Hover-effect:hover{
+    transform:  translateY(-3px) scale(1.01);
+    
+}
+.Hover-effect:hover img{
+    transform:  translateY(-5px) scale(1.02);
+    box-shadow: 10px 9px 17px -10px rgba(0,0,0,0.28);
+}
+h3{
+    font-size: 1.55rem;
+}
+h2{
+    font-size: 1.55rem;
+}
+.news-container{
+    margin-bottom: 69px;
+    padding: 0 1rem;
+    padding-top: 92px;
+}
+.news{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 2rem;
+    
+}
+.news-box{
+    transition: all 0.3s ;
+    text-decoration: none;
+    color: rgb(29, 25, 25);
+
+    background-color: white;
+    padding: 20px;
+}
+
+.news-box:hover{
+    text-decoration: none;
+    color: rgb(29, 25, 25);;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.16), 0 3px 3px rgba(0,0,0,0.23);
+}
+
+
+.searc-bar{
+    justify-content: center;
+}
+
+/* #effect ********************** */
+
+.Hover-effect {
+    position: relative;
+}
+:root{
+    --underline_color: red;
+    --underline-hight:0.175rem;
+}
+.Hover-effect::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: var(--underline-hight);
+    background-color: var(--underline_color);
+    left: 0;
+    bottom: 0;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+}
+
+
+
+.Hover-effect:hover::after {
+    transform: scale(1, 1);
+}
+
+
+.info1{
+	padding: 50px;
+	margin-top: 180px;
+	overflow: hidden;
+	text-align: center;
+	
+}
+
+.container{
+	width: 100%;
+	height: auto;
+	padding: 20px;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+.box{
+	width: 270px;
+	height: 250px;
+	position: relative;
+	background-color: rgba(255,102,104,1.00);
+	margin: 10px auto;
+	cursor: pointer;
+	border-radius: 10px;
+}
+.box img{
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+.box::before, .box::after{
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	right: 15px;
+	bottom: 15px;
+	transition: all 0.5s ease-out;
+}
+.box::before{
+	border-top: 2px dashed white;
+	border-bottom: 2px dashed white;
+	transform: scale(0, 1);
+}
+.box::after{
+	border-left: 2px dashed white;
+	border-right: 2px dashed white;
+	transform: scale(1, 0);
+}
+.box:hover::before{
+	background-color: rgba(0,0,0,0.4);
+	transform: scale(1.05, 1);
+}
+.box:hover::after{
+	transform: scale(1, 1.05);
+}
+.con-text{
+	position: absolute;
+	color: white;
+	bottom: 0;
+	width: 270px;
+	height: 250px;
+	padding: 75px 25px;
+	display: none;
+	text-align: center;
+}
+.box:hover .con-text{
+	display: block;
+}
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
